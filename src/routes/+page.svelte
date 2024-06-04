@@ -1,7 +1,7 @@
 <script>
 	import Button from '$lib/components/ui/button/button.svelte';
 	import ExternalLink from '$lib/components/ui/external-link/ExternalLink.svelte';
-	import { Copy, Heart } from 'lucide-svelte';
+	import { Heart } from 'lucide-svelte';
 	import ConfettiOnClick from '$lib/components/confetti/ConfettiOnClick.svelte';
 	import image from '$lib/assets/samuelhellstrom.png';
 </script>
@@ -74,8 +74,8 @@
 		</li>
 		<li>
 			UI:
-			<ExternalLink>Tailwind</ExternalLink>,
-			<ExternalLink>Shadcn-Svelte</ExternalLink>
+			<ExternalLink href="https://tailwindcss.com/">Tailwind</ExternalLink>,
+			<ExternalLink href="https://www.shadcn-svelte.com/">Shadcn-Svelte</ExternalLink>
 		</li>
 		<li>Hosting: <ExternalLink href="https://vercel.com">Vercel</ExternalLink></li>
 		<li>
