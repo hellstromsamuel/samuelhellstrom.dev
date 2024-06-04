@@ -17,6 +17,19 @@
 	</section>
 	<img src={image} alt="Bilde av Samuel Hellstrøm" class="rounded-3xl sm:max-w-[300px]" />
 </div>
+
+<div class="my-4 grid w-full gap-1 text-center">
+	<ConfettiOnClick>
+		<Button class="flex w-full items-center gap-2" size="lg">
+			<span class="text-lg">{'Gi kudos'}</span>
+			<Heart />
+		</Button>
+	</ConfettiOnClick>
+	<span class="text-xs opacity-50 md:text-sm">
+		Som Strava, bare at du får se en kul animasjon!
+	</span>
+</div>
+
 <section>
 	<h2>Mer om meg</h2>
 	<p>
@@ -71,16 +84,4 @@
 		<li>Database: TBA 📣</li>
 		<li>Blog: TBA 📣</li>
 	</ul>
-
-	<div class="my-4 grid w-full gap-1 text-center">
-		<ConfettiOnClick>
-			<Button class="flex w-full items-center gap-2" size="lg">
-				<span class="text-lg">{'Gi kudos'}</span>
-				<Heart />
-			</Button>
-		</ConfettiOnClick>
-		<span class="text-sm opacity-50">
-			Som på Strava, bare at du kan gi så mange du vil og får se en heftig animasjon!
-		</span>
-	</div>
 </section>

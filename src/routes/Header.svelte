@@ -9,7 +9,7 @@
 </script>
 
 <header
-	class="sticky top-0 flex h-20 w-full items-center justify-between border-b bg-background px-6"
+	class="sticky top-0 z-10 flex h-20 w-full items-center justify-between border-b bg-background px-6"
 >
 	<nav>
 		<ul class="flex items-center gap-4 md:gap-8">
