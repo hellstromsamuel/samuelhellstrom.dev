@@ -4,6 +4,15 @@
 	import { Heart } from 'lucide-svelte';
 	import ConfettiOnClick from '$lib/components/confetti/ConfettiOnClick.svelte';
 	import image from '$lib/assets/samuelhellstrom.png';
+	import { supabase } from '$lib/supabaseClient';
+
+	export let data;
+	let kudos_clicks = data.numberOfKudosClicks;
+
+	async function addKudosClick() {
+		kudos_clicks += 1;
+		await supabase.from('kudos_clicks').insert({}).single();
+	}
 </script>
 
 <div class="flex flex-col items-center gap-8 sm:flex-row">
@@ -19,15 +28,19 @@
 </div>
 
 <div class="my-4 grid w-full gap-1 text-center">
-	<ConfettiOnClick>
-		<Button class="flex w-full items-center gap-2" size="lg">
-			<span class="text-lg">{'Gi kudos'}</span>
-			<Heart />
-		</Button>
-	</ConfettiOnClick>
-	<span class="text-xs opacity-50 md:text-sm">
-		Som Strava, bare at du får se en kul animasjon!
-	</span>
+	<div class="flex gap-2">
+		<ConfettiOnClick>
+			<Button class="flex w-full items-center gap-2 text-lg" size="lg" on:click={addKudosClick}
+				>Gi kudos
+			</Button>
+		</ConfettiOnClick>
+
+		<div class="flex h-11 items-center items-center gap-2 rounded-2xl border px-4">
+			<span>{kudos_clicks}</span>
+			<Heart color="red" />
+		</div>
+	</div>
+	<span class="text-xs opacity-50 md:text-sm"> Som Strava, og du får se en kul animasjon! </span>
 </div>
 
 <section>
