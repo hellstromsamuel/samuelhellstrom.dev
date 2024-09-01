@@ -12,7 +12,14 @@
 		{project.role}
 	</h1>
 
-	<PropertySection heading="Prosjekt">{project.name}</PropertySection>
+	<PropertySection heading="Prosjekt">
+		<p>
+			{project.name}.
+			{#if project.link}
+				<ExternalLink href={project.link}>{project.link}</ExternalLink>
+			{/if}
+		</p>
+	</PropertySection>
 
 	<PropertySection heading="Nøkkelord">
 		<ProjectKeywords {project} />

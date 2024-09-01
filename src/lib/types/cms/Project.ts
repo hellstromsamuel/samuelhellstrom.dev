@@ -10,7 +10,7 @@ export interface Project {
 	role: string;
 	description: string;
 	keywords: Keyword[];
-	link: string;
+	link?: string;
 	company?: Company;
 	image?: Image;
 	fromDate?: string;

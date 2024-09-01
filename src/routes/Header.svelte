@@ -8,7 +8,9 @@
 	$: currentPath = $page.url.pathname;
 </script>
 
-<header class="bg-background sticky top-0 z-10 flex h-20 w-full items-center justify-between px-4">
+<header
+	class="bg-background sticky top-0 z-10 flex h-20 w-full items-center justify-between px-4 md:px-8"
+>
 	<nav>
 		<ul class="flex items-center gap-4 md:gap-8">
 			{#each navRoutes as { href, text }}
