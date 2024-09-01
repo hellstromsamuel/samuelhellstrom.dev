@@ -1,8 +1,12 @@
 <script lang="ts" type="module">
+	import { mediaQuery } from "svelte-legos";
 	import ProjectCard from "$lib/components/projects/ProjectCard.svelte";
-	import Button from "$lib/components/ui/button/button.svelte";
+	import ProjectKeywordFilter from "$lib/components/projects/ProjectKeywordFilter.svelte";
+	import CustomDrawer from "$lib/components/ui/custom/CustomDrawer.svelte";
 	import NavigateBackLink from "$lib/components/ui/link/NavigateBackLink.svelte";
-	import { cn } from "$lib/utils.js";
+
+	const isDesktop = mediaQuery("(min-width: 768px)");
+	let open = false;
 
 	export let data;
 
@@ -17,44 +21,29 @@
 		);
 		return hasAllKeywords;
 	});
-
-	function toggleKeyword(keyword: string) {
-		if (keywordFilters.includes(keyword)) {
-			keywordFilters = keywordFilters.filter((k) => k !== keyword);
-		} else {
-			keywordFilters = [...keywordFilters, keyword];
-		}
-	}
 </script>
 
 <NavigateBackLink href="/" label="Om meg" />
 <h1>Prosjekter 🧑‍💻</h1>
+
 <div class="grid gap-8">
 	{#if allKeyswords.length > 0}
-		<div>
-			<p class="mb-2 text-sm font-bold">Filtrer på nøkkelord</p>
-			<div class="flex flex-wrap gap-2">
-				{#each uniqueKeywords as keyword}
-					<Button
-						size="sm"
-						on:click={() => toggleKeyword(keyword)}
-						variant={keywordFilters.includes(keyword) ? "secondary" : "outline"}
-						class={cn(keywordFilters.includes(keyword) && "text-primary font-semibold")}
-					>
-						{keyword}
-					</Button>
-				{/each}
-
-				{#if keywordFilters.length > 0}
-					<Button
-						size="sm"
-						class="text-xs"
-						variant="destructive"
-						on:click={() => (keywordFilters = [])}>Fjern ({keywordFilters.length})</Button
-					>
-				{/if}
+		{#if $isDesktop}
+			<div>
+				<p class="mb-2 text-sm font-bold">Filtrer på nøkkelord</p>
+				<ProjectKeywordFilter bind:keywordFilters {uniqueKeywords} />
 			</div>
-		</div>
+		{:else}
+			<CustomDrawer
+				{open}
+				buttonLabel={`Filtrer på nøkkelord (${uniqueKeywords.length})`}
+				title="Filtrer på nøkkelord"
+				closeLabel={`Vis prosjekter (${filteredProjects.length})`}
+				buttonClass="w-full"
+			>
+				<ProjectKeywordFilter bind:keywordFilters {uniqueKeywords} />
+			</CustomDrawer>
+		{/if}
 	{/if}
 
 	<div>
