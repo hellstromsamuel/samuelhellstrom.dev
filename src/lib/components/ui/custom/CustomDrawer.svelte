@@ -6,13 +6,15 @@
 	export let buttonLabel;
 	export let title;
 	export let description = "";
+	export let buttonVariant: "outline" | "secondary" | undefined = undefined;
 	export let buttonClass = "";
 	export let closeLabel = "Lukk";
+	export let closeVariant: "outline" | "secondary" | undefined = undefined;
 </script>
 
 <Drawer.Root {open}>
 	<Drawer.Trigger>
-		<Button variant="outline" class={buttonClass}>
+		<Button variant={buttonVariant} class={buttonClass}>
 			{buttonLabel}
 		</Button></Drawer.Trigger
 	>
@@ -27,7 +29,7 @@
 		</div>
 
 		<Drawer.Footer class="py-8">
-			<Drawer.Close><Button variant="secondary">{closeLabel}</Button></Drawer.Close>
+			<Drawer.Close><Button variant={closeVariant}>{closeLabel}</Button></Drawer.Close>
 		</Drawer.Footer>
 	</Drawer.Content>
 </Drawer.Root>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button from "$lib/components/ui/button/button.svelte";
 	import { cn } from "$lib/utils.js";
+	import ProjectRemoveFiltersButton from "./ProjectRemoveFiltersButton.svelte";
 
 	export let keywordFilters: string[] = [];
 	export let uniqueKeywords: string[] = [];
@@ -26,9 +27,5 @@
 		</Button>
 	{/each}
 
-	{#if keywordFilters.length > 0}
-		<Button size="sm" class="text-xs" variant="destructive" on:click={() => (keywordFilters = [])}
-			>Fjern ({keywordFilters.length})</Button
-		>
-	{/if}
+	<ProjectRemoveFiltersButton bind:keywordFilters />
 </div>

@@ -4,6 +4,7 @@
 	import ProjectKeywordFilter from "$lib/components/projects/ProjectKeywordFilter.svelte";
 	import CustomDrawer from "$lib/components/ui/custom/CustomDrawer.svelte";
 	import NavigateBackLink from "$lib/components/ui/link/NavigateBackLink.svelte";
+	import ProjectRemoveFiltersButton from "$lib/components/projects/ProjectRemoveFiltersButton.svelte";
 
 	const isDesktop = mediaQuery("(min-width: 768px)");
 	let open = false;
@@ -34,15 +35,19 @@
 				<ProjectKeywordFilter bind:keywordFilters {uniqueKeywords} />
 			</div>
 		{:else}
-			<CustomDrawer
-				{open}
-				buttonLabel={`Filtrer på nøkkelord (${uniqueKeywords.length})`}
-				title="Filtrer på nøkkelord"
-				closeLabel={`Vis prosjekter (${filteredProjects.length})`}
-				buttonClass="w-full"
-			>
-				<ProjectKeywordFilter bind:keywordFilters {uniqueKeywords} />
-			</CustomDrawer>
+			<div class="grid gap-2">
+				<CustomDrawer
+					{open}
+					buttonLabel={`Filtrer på nøkkelord (${uniqueKeywords.length})`}
+					title="Filtrer på nøkkelord"
+					closeLabel={`Vis prosjekter (${filteredProjects.length})`}
+					buttonClass="w-full"
+					buttonVariant="outline"
+				>
+					<ProjectKeywordFilter bind:keywordFilters {uniqueKeywords} />
+				</CustomDrawer>
+				<ProjectRemoveFiltersButton bind:keywordFilters />
+			</div>
 		{/if}
 	{/if}
 
