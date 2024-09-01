@@ -1,4 +1,4 @@
-export type IKudosClick = {
+export type KudosClick = {
 	id: string;
 	created_at: string;
 };

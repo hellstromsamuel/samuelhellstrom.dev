@@ -1,17 +1,17 @@
 <script>
-	import Button from '$lib/components/ui/button/button.svelte';
-	import ExternalLink from '$lib/components/ui/external-link/ExternalLink.svelte';
-	import { Heart } from 'lucide-svelte';
-	import ConfettiOnClick from '$lib/components/confetti/ConfettiOnClick.svelte';
-	import image from '$lib/assets/samuelhellstrom.png';
-	import { supabase } from '$lib/supabaseClient';
+	import Button from "$lib/components/ui/button/button.svelte";
+	import ExternalLink from "$lib/components/ui/link/ExternalLink.svelte";
+	import { Heart, ThumbsUp } from "lucide-svelte";
+	import ConfettiOnClick from "$lib/components/confetti/ConfettiOnClick.svelte";
+	import image from "$lib/assets/samuelhellstrom.webp";
+	import { supabase } from "$lib/supabaseClient";
 
 	export let data;
 	let kudos_clicks = data.numberOfKudosClicks;
 
 	async function addKudosClick() {
 		kudos_clicks += 1;
-		await supabase.from('kudos_clicks').insert({}).single();
+		await supabase.from("kudos_clicks").insert({}).single();
 	}
 </script>
 
@@ -28,19 +28,19 @@
 </div>
 
 <div class="my-4 grid w-full gap-1 text-center">
-	<div class="flex gap-2">
-		<ConfettiOnClick>
-			<Button class="flex w-full items-center gap-2 text-lg" size="lg" on:click={addKudosClick}
-				>Gi kudos
-			</Button>
-		</ConfettiOnClick>
+	<ConfettiOnClick>
+		<Button class="flex w-full items-center gap-2 text-lg" size="lg" on:click={addKudosClick}
+			>Gi kudos <ThumbsUp class="h-4 w-4" />
+		</Button>
+	</ConfettiOnClick>
 
-		<div class="flex h-11 items-center items-center gap-2 rounded-2xl border px-4">
-			<span>{kudos_clicks}</span>
-			<Heart color="red" />
-		</div>
+	<div class="flex items-center justify-center gap-2">
+		<span class="text-sm md:text-base">Som Strava + en kul animasjon! </span>
+		<span class="flex items-center gap-1 rounded-full border px-2 py-1 text-sm font-bold">
+			{kudos_clicks}
+			<Heart class="h-5 w-5 text-red-500" />
+		</span>
 	</div>
-	<span class="text-xs opacity-50 md:text-sm"> Som Strava, og du får se en kul animasjon! </span>
 </div>
 
 <section>
@@ -58,20 +58,18 @@
 		> på UiO (anbefales!) fra 2019-2024. I tillegg var jeg på Gründerskolen i Boston sommeren 2022 for
 		å prøve noe nytt og utforske gründerspiren i meg. Det førte til at jeg startet selskapet
 		<ExternalLink href="https://easyplay.no">EasyPlay 💚</ExternalLink>
-		sammen med noen venner, hvor jeg er CTO. Til høsten starter jeg også i jobben som utvikler i konsulentselskapet
+		sammen med noen venner, hvor jeg er CTO. I august 2024 startet jeg også som utvikler i det nordiske
+		konsulentselskapet
 		<ExternalLink href="https://knowit.no">Knowit</ExternalLink>.
 	</p>
 </section>
 
 <section>
-	<h2>
-		Om
-		<span class="bg-gray-200 dark:bg-gray-700"> samuelhellstrom.dev </span>
-	</h2>
+	<h2>samuelhellstrom.dev</h2>
 	<p>
 		Jeg har hatt noen sporadiske forsøk på å lage en personlig nettside tidligere, med tanken om at
 		jeg skulle skille meg ut i jobbsøknader. Nå vil jeg heller bare å lage en sikkelig rå nettside,
-		mest fordi jeg synes det er gøy å programmere 🚀.
+		fordi jeg synes det er gøy å utforske nye teknologier 🚀.
 	</p>
 	<p>
 		Noe av det vanskeligste med å lage denne nettsiden var å velge hvilken farge jeg skulle bruke.
@@ -85,16 +83,21 @@
 			<ExternalLink href="https://kit.svelte.dev/">SvelteKit</ExternalLink>
 			med Typescript
 		</li>
+		<li>CMS: <ExternalLink href="https://sanity.io/">Sanity</ExternalLink></li>
+		<li>Database: <ExternalLink href="https://supabase.com">Supabase</ExternalLink></li>
 		<li>
 			UI:
 			<ExternalLink href="https://tailwindcss.com/">Tailwind</ExternalLink>,
 			<ExternalLink href="https://www.shadcn-svelte.com/">Shadcn-Svelte</ExternalLink>
 		</li>
+		<li>
+			Font: <ExternalLink href="https://fontsource.org/fonts/ibm-plex-mono"
+				>IBM Plex Mono</ExternalLink
+			>
+		</li>
 		<li>Hosting: <ExternalLink href="https://vercel.com">Vercel</ExternalLink></li>
 		<li>
 			Domene: <ExternalLink href="https://domene.shop">Domeneshop</ExternalLink> (samuelhellstrom.dev)
 		</li>
-		<li>Database: TBA 📣</li>
-		<li>Blog: TBA 📣</li>
 	</ul>
 </section>

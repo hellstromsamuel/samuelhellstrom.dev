@@ -1,10 +1,7 @@
 <script>
-	const contactInfo = {
-		email: ''
-	};
+	import NavigateBackLink from "$lib/components/ui/link/NavigateBackLink.svelte";
 </script>
 
-<section>
-	<h1>Konktakt 📨</h1>
-	<p>Kommer snart!</p>
-</section>
+<NavigateBackLink href="/" label="Om meg" />
+<h1>Konktakt 📨</h1>
+<p>Kommer snart!</p>

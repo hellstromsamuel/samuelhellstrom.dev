@@ -1,4 +1,4 @@
-import { getNumberOfKudosClicks } from '$lib/api/kudos';
+import { getNumberOfKudosClicks } from "$lib/api/kudos";
 
 export async function load() {
 	const data = await getNumberOfKudosClicks();
