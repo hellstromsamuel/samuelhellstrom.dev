@@ -39,7 +39,7 @@
 
 	{#if project.company}
 		<PropertySection heading="Selskap">
-			<div class="flex flex-col gap-8 md:flex-row md:items-center">
+			<div class="flex flex-col gap-8 md:flex-row-reverse md:items-center">
 				{#if project.company.logo}
 					<img
 						src={project.company.logo.asset.url}
