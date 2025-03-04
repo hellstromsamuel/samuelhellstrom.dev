@@ -50,7 +50,8 @@
 
 section {
 	display: grid;
-	gap: 0.75rem;
+	gap: 1rem;
+	margin-top: 2rem;
 }
 
 a:hover {
@@ -58,18 +59,32 @@ a:hover {
 }
 
 p {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
+	@media only screen and (min-width: 768px) {
+		font-size: 1.5rem;
+	}
 }
 li {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
+	@media only screen and (min-width: 768px) {
+		font-size: 1.5rem;
+	}
 }
 
 h1 {
-	font-size: 2.25rem;
+	font-size: 2.5rem;
 	font-weight: 700;
+	@media only screen and (min-width: 768px) {
+		font-size: 3.25rem;
+	}
 }
 
 h2 {
-	font-size: 1.6rem;
+	font-size: 2rem;
 	font-weight: 700;
+
+	font-weight: 700;
+	@media only screen and (min-width: 768px) {
+		font-size: 2.5rem;
+	}
 }

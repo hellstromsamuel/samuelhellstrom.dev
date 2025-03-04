@@ -1,5 +1,5 @@
 <script lang="ts" type="module">
-	import type { Project } from "$lib/types/cms/Project";
+	import type { Project } from "$lib/types/sanity/Project";
 	import PropertySection from "./PropertySection.svelte";
 	import ExternalLink from "../ui/link/ExternalLink.svelte";
 	import ProjectKeywords from "./ProjectKeywords.svelte";

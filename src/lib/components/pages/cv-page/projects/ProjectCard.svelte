@@ -1,5 +1,5 @@
 <script lang="ts" type="module">
-	import type { Project } from "$lib/types/cms/Project";
+	import type { Project } from "$lib/types/sanity/Project";
 	import { cn } from "$lib/utils";
 	import { ArrowRight } from "lucide-svelte";
 	import ProjectKeywords from "./ProjectKeywords.svelte";

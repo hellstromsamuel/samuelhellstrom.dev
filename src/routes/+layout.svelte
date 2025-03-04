@@ -5,12 +5,14 @@
 	import "@fontsource/ibm-plex-mono/700.css";
 </script>
 
-<div class="bg-background flex min-h-screen flex-col">
-	<Header />
+<div class="bg-background">
+	<div class="mx-auto flex min-h-screen max-w-5xl flex-col">
+		<Header />
 
-	<main class="mx-auto flex w-full max-w-2xl flex-1 flex-col flex-col gap-8 px-4 py-8">
-		<slot />
-	</main>
+		<main class="flex w-full flex-1 flex-col gap-8 px-4 py-8">
+			<slot />
+		</main>
+	</div>
 </div>
 
 <style>

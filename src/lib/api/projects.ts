@@ -1,5 +1,5 @@
-import { sanityClient } from "$lib/cms/sanityClient";
-import type { Project } from "$lib/types/cms/Project";
+import { sanityClient } from "$lib/sanity/sanityClient";
+import type { Project } from "$lib/types/sanity/Project";
 
 const projectPropertyQuery = `{
   _id,
