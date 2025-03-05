@@ -23,7 +23,7 @@
 	<p>
 		Det førte til at jeg startet selskapet
 		<ExternalLink href="https://easyplay.no">EasyPlay 💚</ExternalLink>
-		sammen med noen venner, hvor jeg er CTO. I tillegg jobber jeg som utvikler i konsulentselskapet
+		sammen med noen venner, hvor jeg er CTO. Ved siden av dette jobber jeg som utvikler i konsulentselskapet
 		<ExternalLink href="https://knowit.no">Knowit</ExternalLink>.
 	</p>
 </section>
