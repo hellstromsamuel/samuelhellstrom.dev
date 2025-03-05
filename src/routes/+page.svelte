@@ -36,7 +36,7 @@
 	</p>
 	<p>Mer info om nettsiden til tech-geeks som meg:</p>
 
-	<ul class="list-disc pl-6">
+	<ul class="list-disc pl-8">
 		<li>
 			Frontend rammeverk:
 			<ExternalLink href="https://kit.svelte.dev/">SvelteKit</ExternalLink>

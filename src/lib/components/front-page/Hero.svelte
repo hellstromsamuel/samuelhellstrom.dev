@@ -1,17 +1,31 @@
 <script>
 	import image from "$lib/assets/samuelhellstrom.webp";
+	import ExternalLink from "../ui/link/ExternalLink.svelte";
 </script>
 
-<div class="flex flex-col-reverse items-center justify-center gap-8 md:flex-row">
+<div class="flex flex-col-reverse items-center justify-center gap-8 lg:flex-row">
 	<div>
 		<h1>
 			<span>Hei </span>
 			<span class="animate-wave inline-block">👋</span>
 		</h1>
-		<p>
+		<p class="mt-2">
 			Velkommen til min personlige nettside. Mitt navn er <strong>Samuel Hellstrøm</strong> og jeg er
 			utvikler / gründer / idrettsutøver.
 		</p>
+
+		<ul class="mt-4 list-disc space-y-2 pl-8">
+			<li>
+				Epost: <ExternalLink href="mailto:hellstromsamuel@gmail.com"
+					>hellstromsamuel@gmail.com</ExternalLink
+				>
+			</li>
+			<li>
+				Lenker:
+				<ExternalLink href="https://www.linkedin.com/in/samuel-hellstrom/">LinkedIn</ExternalLink>
+				<ExternalLink href="https://github.com/hellstromsamuel">GitHub</ExternalLink>
+			</li>
+		</ul>
 	</div>
 
 	<img src={image} alt="Bilde av Samuel Hellstrøm" class="w-full max-w-[350px] rounded-full" />
