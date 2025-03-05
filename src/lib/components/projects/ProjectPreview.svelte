@@ -18,7 +18,7 @@
 				{project.name}
 			</p>
 
-			<ProjectKeywords {project} keywordClass="text-xs md:text-base" />
+			<ProjectKeywords {project} keywordClass="text-xs" />
 		</div>
 	</div>
 </div>

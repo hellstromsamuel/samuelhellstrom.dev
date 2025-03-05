@@ -4,17 +4,16 @@
 
 	export let data;
 	let projects = data.projects;
-
 	let pageTitle = navRoutes.find((route) => route.href === "/cv")?.text;
 </script>
 
-<div class="space-y-2">
+<div class="space-y-4">
 	<h1>{pageTitle}</h1>
 	<hr />
-</div>
 
-<div class="space-y-8">
-	{#each projects as project}
-		<ProjectPreview {project} />
-	{/each}
+	<div class="space-y-8">
+		{#each projects as project}
+			<ProjectPreview {project} />
+		{/each}
+	</div>
 </div>
