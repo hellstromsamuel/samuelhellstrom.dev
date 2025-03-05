@@ -1,6 +1,6 @@
 <script lang="ts" type="module">
 	import type { Project } from "$lib/types/sanity/Project";
-	import { cn } from "$lib/utils";
+	import { cn } from "$lib/tailwindind";
 	import { ArrowRight } from "lucide-svelte";
 	import ProjectKeywords from "./ProjectKeywords.svelte";
 

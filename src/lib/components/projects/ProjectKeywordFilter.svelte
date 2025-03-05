@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { cn } from "$lib/utils/tailwind";
 	import Button from "$lib/components/ui/button/button.svelte";
-	import { cn } from "$lib/utils.js";
 	import ProjectRemoveFiltersButton from "./ProjectRemoveFiltersButton.svelte";
 
 	export let keywordFilters: string[] = [];
@@ -21,7 +21,7 @@
 			size="sm"
 			on:click={() => toggleKeyword(keyword)}
 			variant={keywordFilters.includes(keyword) ? "secondary" : "outline"}
-			class={cn(keywordFilters.includes(keyword) && "text-primary font-semibold")}
+			class={cn(keywordFilters.includes(keyword) && "font-semibold text-primary")}
 		>
 			{keyword}
 		</Button>

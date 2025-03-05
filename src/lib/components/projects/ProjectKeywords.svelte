@@ -1,5 +1,5 @@
 <script>
-	import { cn } from "$lib/utils";
+	import { cn } from "$lib/tailwindind";
 
 	export let project;
 	export let limit = -1;
