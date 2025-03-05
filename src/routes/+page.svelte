@@ -29,7 +29,7 @@
 </section>
 
 <section>
-	<h2>samuelhellstrom.dev</h2>
+	<h2>Nettsiden</h2>
 	<p>
 		Jeg ville egentlig bare lage en heftig nettside og utforske nye teknologier 🚀 I tillegg synes
 		jeg blåfargen var kul 🤠
