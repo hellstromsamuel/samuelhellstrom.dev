@@ -14,7 +14,7 @@
 		</p>
 	</div>
 
-	<img src={image} alt="Bilde av Samuel Hellstrøm" class="max-w-[350px] rounded-full" />
+	<img src={image} alt="Bilde av Samuel Hellstrøm" class="w-full max-w-[350px] rounded-full" />
 </div>
 
 <style>
