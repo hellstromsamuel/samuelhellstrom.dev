@@ -1,6 +1,6 @@
 <script>
 	import ExternalLink from "$lib/components/ui/link/ExternalLink.svelte";
-	import Hero from "$lib/components/pages/front-page/Hero.svelte";
+	import Hero from "$lib/components/front-page/Hero.svelte";
 </script>
 
 <section>

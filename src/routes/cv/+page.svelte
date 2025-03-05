@@ -1,10 +1,10 @@
 <script lang="ts" type="module">
 	import { mediaQuery } from "svelte-legos";
+	import ProjectCard from "$lib/components/projects/ProjectCard.svelte";
+	import ProjectKeywordFilter from "$lib/components/projects/ProjectKeywordFilter.svelte";
 	import CustomDrawer from "$lib/components/ui/custom/CustomDrawer.svelte";
 	import NavigateBackLink from "$lib/components/ui/link/NavigateBackLink.svelte";
-	import ProjectKeywordFilter from "$lib/components/projects/ProjectKeywordFilter.svelte";
 	import ProjectRemoveFiltersButton from "$lib/components/projects/ProjectRemoveFiltersButton.svelte";
-	import ProjectCard from "$lib/components/projects/ProjectCard.svelte";
 
 	const isDesktop = mediaQuery("(min-width: 768px)");
 	let open = false;

@@ -1,7 +1,7 @@
 <script lang="ts" type="module">
 	import type { Project } from "$lib/types/sanity/Project";
 	import PropertySection from "./PropertySection.svelte";
-	import ExternalLink from "../ui/link/ExternalLink.svelte";
+	import ExternalLink from "$lib/components/ui/link/ExternalLink.svelte";
 	import ProjectKeywords from "./ProjectKeywords.svelte";
 
 	export let project: Project;
