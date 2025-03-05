@@ -1,7 +1,7 @@
 <script>
 	import { page } from "$app/stores";
 	import ColorThemeButton from "$lib/components/ui/button/ColorThemeButton.svelte";
-	import { cn } from "$lib/tailwindind";
+	import { cn } from "$lib/utils/tailwind";
 	import { navRoutes } from "$lib/utils/navigation";
 
 	let currentPath;

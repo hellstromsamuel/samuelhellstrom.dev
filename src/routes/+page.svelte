@@ -17,13 +17,13 @@
 		Jeg har mastergrad i
 		<ExternalLink href="https://uio.no/studier/program/informatikk-ledelse/"
 			>Informatikk: Digital økonomi og ledelse</ExternalLink
-		> på UiO (anbefales!) fra 2019-2024. Sommeren 2022 var jeg på Gründerskolen i Boston for å prøve
-		noe nytt og utforske gründerspiren i meg.
+		> på UiO (anbefales!). Sommeren 2022 var jeg på Gründerskolen i Boston for å prøve noe nytt og utforske
+		gründerspiren i meg.
 	</p>
 	<p>
 		Det førte til at jeg startet selskapet
 		<ExternalLink href="https://easyplay.no">EasyPlay 💚</ExternalLink>
-		sammen med noen venner, hvor jeg er CTO. I august 2024 startet jeg også som utvikler i konsulentselskapet
+		sammen med noen venner, hvor jeg er CTO. I tillegg jobber jeg som utvikler i konsulentselskapet
 		<ExternalLink href="https://knowit.no">Knowit</ExternalLink>.
 	</p>
 </section>
@@ -43,7 +43,6 @@
 			med Typescript
 		</li>
 		<li>CMS: <ExternalLink href="https://sanity.io/">Sanity</ExternalLink></li>
-		<li>Database: <ExternalLink href="https://supabase.com">Supabase</ExternalLink></li>
 		<li>
 			UI:
 			<ExternalLink href="https://tailwindcss.com/">Tailwind</ExternalLink>,
