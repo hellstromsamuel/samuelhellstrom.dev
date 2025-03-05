@@ -15,8 +15,8 @@
 				<li>
 					<a
 						class={cn(
-							"hover:text-primary hover:underline",
-							href === currentPath && "font-bold text-primary underline"
+							"rounded px-2 py-1 font-bold hover:underline ",
+							href === currentPath && "bg-gray-100 text-primary dark:bg-gray-800"
 						)}
 						{href}
 						aria-current={href === currentPath ? "page" : undefined}
