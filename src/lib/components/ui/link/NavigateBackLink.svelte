@@ -5,7 +5,7 @@
 	export let label = "Tilbake";
 </script>
 
-<a {href} class="flex w-max gap-4 font-semibold underline hover:no-underline">
-	<ArrowLeft class="h-6 w-6" />
+<a {href} class="flex w-max items-center gap-4 font-semibold hover:underline">
+	<ArrowLeft class="h-5 w-5" />
 	{label}
 </a>
