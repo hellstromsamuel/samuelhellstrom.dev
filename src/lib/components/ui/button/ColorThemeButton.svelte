@@ -6,8 +6,8 @@
 	import { Button } from "$lib/components/ui/button/index.js";
 </script>
 
-<Button on:click={toggleMode} variant="outline" class="gap-2 font-bold" size="sm">
-	<span class="hidden md:block">Bytt fargetema</span>
-	<Sun class="hidden h-[1.2rem] w-[1.2rem] text-yellow-200 dark:block" />
-	<Moon class="block h-[1.2rem] w-[1.2rem] text-blue-900 dark:hidden" />
+<Button on:click={toggleMode} variant="outline" class="h-auto gap-4 p-3" size="lg">
+	<p class="hidden text-xl font-bold md:block">Bytt fargetema</p>
+	<Sun class="hidden h-6 w-6 text-yellow-200 dark:block" />
+	<Moon class="block h-6 w-6 text-blue-900 dark:hidden" />
 </Button>

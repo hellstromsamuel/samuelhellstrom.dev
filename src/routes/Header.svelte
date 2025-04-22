@@ -8,14 +8,14 @@
 	$: currentPath = $page.url.pathname;
 </script>
 
-<header class="sticky top-0 z-10 flex h-20 w-full items-center justify-between bg-background px-4">
+<header class="sticky top-0 z-10 flex h-20 w-full items-center justify-between bg-background px-2">
 	<nav>
-		<ul class="flex items-center gap-4 md:gap-8">
+		<ul class="flex items-center gap-2 md:gap-4">
 			{#each navRoutes as { href, text }}
 				<li>
 					<a
 						class={cn(
-							"rounded px-2 py-1 font-bold hover:underline ",
+							"min-w-max text-nowrap rounded-sm p-3 font-bold",
 							href === currentPath && "bg-gray-100 text-primary dark:bg-gray-800"
 						)}
 						{href}

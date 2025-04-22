@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { cn } from "$lib/utils/tailwind";
 	import Button from "$lib/components/ui/button/button.svelte";
-	import ProjectRemoveFiltersButton from "./ProjectRemoveFiltersButton.svelte";
 
 	export let keywordFilters: string[] = [];
 	export let uniqueKeywords: string[] = [];
@@ -27,5 +26,9 @@
 		</Button>
 	{/each}
 
-	<ProjectRemoveFiltersButton bind:keywordFilters />
+	{#if keywordFilters.length > 0}
+		<Button size="sm" variant="destructive" on:click={() => (keywordFilters = [])}>
+			Fjern valg ({keywordFilters.length})
+		</Button>
+	{/if}
 </div>
