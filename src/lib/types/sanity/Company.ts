@@ -5,5 +5,8 @@ export interface Company {
 	name: string;
 	website: string;
 	logo?: Asset;
+	role: string;
+	timeFrom: string;
+	timeTo: string;
 	description: string;
 }

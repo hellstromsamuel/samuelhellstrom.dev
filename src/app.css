@@ -47,19 +47,3 @@
 		--ring: 224.3 76.3% 48%;
 	}
 }
-
-h1 {
-	font-size: 2.5rem;
-	font-weight: 700;
-	@media only screen and (min-width: 768px) {
-		font-size: 3.25rem;
-	}
-}
-
-h2 {
-	font-size: 2rem;
-	font-weight: 700;
-	@media only screen and (min-width: 768px) {
-		font-size: 2.5rem;
-	}
-}

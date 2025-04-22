@@ -1,14 +1,15 @@
 <script>
 	import ExternalLink from "$lib/components/ui/link/ExternalLink.svelte";
 	import Hero from "$lib/components/front-page/Hero.svelte";
-</script>
+	import H2 from "$lib/components/ui/text/H2.svelte";
+	</script>
 
 <section>
 	<Hero />
 </section>
 
 <section>
-	<h2>Mer om meg</h2>
+	<H2>Mer om meg</H2>
 	<p>
 		Helt siden jeg var liten har jeg alltid elsket å bygge ting, bare at nå er LEGO byttet ut med
 		kode.
@@ -29,7 +30,7 @@
 </section>
 
 <section>
-	<h2>Nettsiden</h2>
+	<H2>Nettsiden</H2>
 	<p>
 		Jeg ville egentlig bare lage en heftig nettside og utforske nye teknologier 🚀 I tillegg synes
 		jeg blåfargen var kul 🤠

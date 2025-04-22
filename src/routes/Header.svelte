@@ -12,16 +12,17 @@
 	<nav>
 		<ul class="flex items-center gap-2 md:gap-4">
 			{#each navRoutes as { href, text }}
-				<li>
+				<li class={cn(
+					"min-w-max text-nowrap rounded-sm px-3 h-12 font-bold text-lg",
+					href === currentPath && "bg-gray-100 text-primary dark:bg-gray-800"
+				)}>
 					<a
-						class={cn(
-							"min-w-max text-nowrap rounded-sm p-3 font-bold",
-							href === currentPath && "bg-gray-100 text-primary dark:bg-gray-800"
-						)}
+						class="flex h-full items-center justify-center"
 						{href}
 						aria-current={href === currentPath ? "page" : undefined}
 					>
 						{text}
+						
 					</a>
 				</li>
 			{/each}

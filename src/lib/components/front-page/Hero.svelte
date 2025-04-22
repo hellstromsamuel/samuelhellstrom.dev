@@ -1,14 +1,15 @@
 <script>
 	import image from "$lib/assets/samuelhellstrom.webp";
 	import ExternalLink from "../ui/link/ExternalLink.svelte";
+	import H1 from "../ui/text/H1.svelte";
 </script>
 
 <div class="flex flex-col-reverse items-center justify-center gap-8 lg:flex-row">
-	<div>
-		<h1>
+	<div>				
+		<H1>
 			<span>Hei </span>
 			<span class="animate-wave inline-block">👋</span>
-		</h1>
+		</H1>
 		<p class="mt-2">
 			Velkommen til min personlige nettside. Mitt navn er <strong>Samuel Hellstrøm</strong> og jeg er
 			utvikler / gründer / idrettsutøver.
